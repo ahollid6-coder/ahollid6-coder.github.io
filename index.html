@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andre Holliday | Creative Portfolio</title>
+
+  <style>
+    /* General website appearance */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111827;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      padding: 25px 8%;
+      background-color: #1f2937;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    /* Introduction */
+    .hero {
+      padding: 100px 8%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      margin-bottom: 10px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #d1d5db;
+      font-size: 20px;
+    }
+
+    /* Portfolio sections */
+    section {
+      padding: 55px 8%;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(230px, 1fr)
+      );
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1f2937;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Website navigation -->
+  <header>
+    <nav>
+      <strong>Andre Holliday</strong>
+      <div>
+        <a href="#about">About</a>
+        <a href="#work">My Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Homepage introduction -->
+  <div class="hero">
+    <h1>Hello, I'm <span>Andre.</span></h1>
+    <p>
+      Creative Developer | Photographer |
+      Digital Designer
+    </p>
+    <p>
+      Bringing creativity and technology together.
+    </p>
+  </div>
+
+  <!-- About section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm an Emerging Media and Technology student
+      at Kent State University, specializing in
+      photography, web design, and creative technology.
+    </p>
+  </section>
+
+  <!-- Portfolio projects -->
+  <section id="work">
+    <h2>My Work</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>Photography</h3>
+        <p>
+          Studio photography, portraits,
+          and digital photo editing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Web & UI/UX Design</h3>
+        <p>
+          Website design, Figma prototypes,
+          and user-centered experiences.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Programming</h3>
+        <p>
+          Python, data visualization,
+          and interactive applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Media</h3>
+        <p>
+          Digital storytelling, video production,
+          and AI-powered creative projects.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Interested in working together?
+      Contact information coming soon.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Andre Holliday. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
