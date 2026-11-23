@@ -367,13 +367,13 @@ function openPhoto(image) {
 function closePhoto() {
     document.getElementById("photoLightbox").style.display = "none";
 }
-// Make every gallery photograph clickable
-document.querySelectorAll(".photo-gallery img").forEach(function(image) {
-    image.style.cursor = "pointer";
+// Make gallery photos open when clicked
+document.addEventListener("click", function(event) {
+    const image = event.target.closest(".photo-gallery img");
 
-    image.addEventListener("click", function() {
+    if (image) {
         openPhoto(image);
-    });
+    }
 });
 </script>
   !-- Full-size photography viewer -->
