@@ -280,13 +280,13 @@ My goal is to build a career in creative technology, contributing to projects th
     <div class="projects">
 
       
- <button type="button" class="card" onclick="togglePhotography()" style="width:100%; text-align:left; color:inherit; font:inherit; cursor:pointer;">
+ <a href="#photography" class="card" onclick="togglePhotography(); return false;">
     <h3>Photography</h3>
     <p>
         Studio photography, portraits,
         and digital photo editing.
     </p>
- </button>
+ </a>
     
 
  
@@ -501,13 +501,22 @@ My goal is to build a career in creative technology, contributing to projects th
   </footer>
 <script>
 function togglePhotography() {
-    const gallery = document.getElementById("photography");
+  const gallery = document.getElementById("photography");
 
-    if (gallery.style.display === "none") {
-        gallery.style.display = "block";
-    } else {
-        gallery.style.display = "none";
-    }
+  if (!gallery) return;
+
+  const isHidden = window.getComputedStyle(gallery).display === "none";
+
+  if (isHidden) {
+    gallery.style.display = "block";
+
+    gallery.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else {
+    gallery.style.display = "none";
+  }
 }
   // Open a photograph at full size
 function openPhoto(image) {
