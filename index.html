@@ -131,6 +131,36 @@ section#about p {
     line-height: 1.8;
     text-align: center;
 }
+/* Photography Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  @media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -186,13 +216,27 @@ My goal is to build a career in creative technology, contributing to projects th
     <div class="projects">
 
       <div class="card">
-        <h3>Photography</h3>
-        <p>
-          Studio photography, portraits,
-          and digital photo editing.
-        </p>
-      </div>
+  <h3>Photography</h3>
+  <p>
+    Studio photography, portraits,
+    and digital photo editing.
+  </p>
 
+  <div class="photo-gallery">
+    <img src="images/dez2final.jpg" alt="Portrait of Desiree">
+    <img src="images/Kitfinal2.jpg" alt="Studio portrait">
+    <img src="images/Andre Holliday P1 2nd.jpg" alt="Photography project">
+    <img src="images/Andre Holliday project 1.jpg" alt="Creative photography">
+    <img src="images/Studio Session project2 day2-255-Edit copy.jpg" alt="Studio session">
+    <img src="images/braceletcropped2.jpg" alt="Product photography">
+    <img src="images/project3-3504.jpg" alt="Photography project three">
+    <img src="images/cosmic joke.jpg" alt="Cosmic Joke">
+    <img src="images/egypt.jpg" alt="Egypt photography">
+    <img src="images/FinalBrandoncrop.jpg" alt="Portrait of Brandon">
+    <img src="images/FinalEd.jpg" alt="Portrait of Ed">
+    <img src="images/FinalEvan.jpg" alt="Portrait of Evan">
+  </div>
+</div>
       <div class="card">
         <h3>Web & UI/UX Design</h3>
         <p>
