@@ -131,21 +131,24 @@ section#about p {
     line-height: 1.8;
     text-align: center;
 }
-/* Photography Gallery */
+/* Photography gallery layout */
 .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
+    column-count: 3;
+    column-gap: 15px;
+    margin-top: 25px;
 }
 
 .photo-gallery img {
+    display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    margin-bottom: 15px;
+    break-inside: avoid;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
 }
+
+
 
 .photo-gallery img:hover {
     transform: scale(1.05);
@@ -153,12 +156,13 @@ section#about p {
 
 @media (max-width: 768px) {
     .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        column-count: 2;
     }
 }
-  @media (max-width: 480px) {
+
+@media (max-width: 480px) {
     .photo-gallery {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
 }
 /* Photography card link styling */
@@ -348,7 +352,7 @@ function togglePhotography() {
     const gallery = document.getElementById("photography");
 
     if (gallery.style.display === "none") {
-        gallery.style.display = "grid";
+        gallery.style.display = "block";
     } else {
         gallery.style.display = "none";
     }
