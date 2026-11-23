@@ -193,6 +193,34 @@ a.card p {
     color: white;
     text-decoration: none;
 }
+  /* Full-size photography viewer */
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.photo-lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.photo-lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
 </style>
 </head>
 
@@ -325,6 +353,33 @@ function togglePhotography() {
         gallery.style.display = "none";
     }
 }
+  // Open a photograph at full size
+function openPhoto(image) {
+    const lightbox = document.getElementById("photoLightbox");
+    const largeImage = document.getElementById("lightboxImage");
+
+    largeImage.src = image.src;
+    largeImage.alt = image.alt;
+    lightbox.style.display = "flex";
+}
+
+// Close the full-size photograph
+function closePhoto() {
+    document.getElementById("photoLightbox").style.display = "none";
+}
+// Make every gallery photograph clickable
+document.querySelectorAll(".photo-gallery img").forEach(function(image) {
+    image.style.cursor = "pointer";
+
+    image.addEventListener("click", function() {
+        openPhoto(image);
+    });
+});
 </script>
+  !-- Full-size photography viewer -->
+<div id="photoLightbox" class="photo-lightbox">
+    <span class="close" onclick="closePhoto()">&times;</span>
+    <img id="lightboxImage" src="" alt="Enlarged photograph">
+</div>
 </body>
 </html>
